@@ -151,7 +151,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Recent advancements in large language models (LLMs) have enabled a new research domain, LLM agents, for solving robotics and planning tasks by leveraging the world knowledge and general reasoning abilities of LLMs obtained during pretraining. However, while considerable effort has been made to teach the robot the "dos," the "don'ts" received relatively less attention. We argue that, for any practical usage, it is as crucial to teach the robot the "don'ts": conveying explicit instructions about prohibited actions, assessing the robot's comprehension of these restrictions, and, most importantly, ensuring compliance. Moreover, verifiable safe operation is essential for deployments that satisfy worldwide standards such as ISO 61508, which defines standards for safely deploying robots in industrial factory environments worldwide. Aiming at deploying the LLM agents in a collaborative environment, we propose a queryable safety constraint module based on linear temporal logic (LTL) that simultaneously enables natural language (NL) to temporal constraints encoding, safety violation reasoning and explaining, and unsafe action pruning. To demonstrate the effectiveness of our system, we conducted experiments in VirtualHome environment and on a real robot. The experimental results show that our system strictly adheres to the safety constraints and scales well with complex safety constraints, highlighting its potential for practical utility.          </p>
+          Recent advancements in large language models (LLMs) have enabled a new research domain, LLM agents, for solving robotics and planning tasks by leveraging the world knowledge and general reasoning abilities of LLMs obtained during pretraining. However, while considerable effort has been made to teach the robot the "dos," the "don'ts" received relatively less attention. 
+          We argue that, for any practical usage, it is as crucial to teach the robot the "don'ts": conveying explicit instructions about prohibited actions, assessing the robot's comprehension of these restrictions, and, most importantly, ensuring compliance. 
+          Moreover, verifiable safe operation is essential for deployments that satisfy worldwide standards such as ISO 61508, which defines standards for safely deploying robots in industrial factory environments worldwide. 
+          <br><br>Aiming at deploying the LLM agents in a collaborative environment, we propose a queryable safety constraint module based on linear temporal logic (LTL) that simultaneously enables natural language (NL) to temporal constraints encoding, safety violation reasoning and explaining, and unsafe action pruning. To demonstrate the effectiveness of our system, we conducted experiments in VirtualHome environment and on a real robot. 
+          The experimental results show that our system strictly adheres to the safety constraints and scales well with complex safety constraints, highlighting its potential for practical utility.          </p>
         </div>
       </div>
     </div>
@@ -227,7 +231,7 @@
         the agent's proposed action by progressing the propositionlevel trajectory. In addition, the output of the query system
         is also used to assist the agent in performing re-planning.
       </p>
-      <img src="static/images/LTL_safety_system_icra.png" height="100%">
+      <img src="static/images/LTL_safety_system_icra.png" height="90%">
       </div>
     </div>
   </div>
@@ -238,7 +242,7 @@
         <h2 class="title is-3">NL to LTL translation</h2>
       <p>
         We adopted the modular
-        framework of <a href="https://arxiv.org/abs/2302.11649v2">Lang2LTL</a> as NL to domain-specific
+        framework of <a href="https://arxiv.org/abs/2302.11649v2" taget="_blank">Lang2LTL</a> as NL to domain-specific
         LTL formula translator using a predefined vocabulary. This
         involves extracting referring expressions, grounding referring
         expressions to propositions within the vocabulary, translating
@@ -250,10 +254,32 @@
         constraints are assumed to be provided as a series of basic
         segments.
       </p>
-      <img src="static/images/LTL_safety_system_icra.png" height="100%">
+      <img src="static/images/lang2ltl.png" height="90%">
       </div>
     </div>
   </div>
+
+  <div class="container is-max-desktop">
+    <div class="column">
+      <div class="content">
+        <h2 class="title is-3">Results</h2>
+      <p>
+        Safety Chip could achieve
+        100% safety rate with expert-verified LTL formulas in
+        both experiments, which significantly outperformed the other
+        baselines, especially under a larger number of constraints.
+        Besides, even without expert verification, there is still a large
+        margin over the other baselines, though the success rate
+        is affected because of the mistranslated safety constraints.
+        On the contrary, the NL Constraints baseline struggles to
+        adhere to the safety constraint even with expert-provided NL
+        constraints.
+      </p>
+      <img src="static/images/vh_result.png" height="90%">
+      </div>
+    </div>
+  </div>
+
 </section>
 
 
@@ -262,10 +288,16 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3">Robot Demo</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
+          <p>
+            We deploy the baseline LLM agent with safety chip plugged in on a quadruped robot, and build an indoor environment consisting of 23 objects
+            and landmarks, and the environmental information is stored
+            in the scanned graph from the Spot robot. We define two
+            mobile manipulation tasks with up to ten safety constraints for each, and we progressively increase
+            the number of constraints applied to the task.
+          </p>
           <div class="publication-video">
             <!-- Youtube embed code here -->
             <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
