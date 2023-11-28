@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents">
+  <meta property="og:title" content="Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents"/>
+  <meta property="og:description" content=" A safety module for LLM-driven robot agents that allows encoding safety constraint in natural language, pruning unsafe actions, and assisting the agents to re-generate the plan."/>
+  <meta property="og:url" content="https://github.com/YzyLmc/ltl_safety"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/image/icon.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -20,7 +20,7 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="safety chip, formal verification for LLMs, natural language to temporal logic grounding">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -127,20 +127,20 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
-        <source src="static/videos/safety_chip_1080.mp4"
-        type="video/mp4">
-      </video>
+        <!-- <source src="static/videos/safety_chip_1080.mp4"
+        type="video/mp4"> -->
+      <!-- </video> -->
       <!-- <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2> -->
-    </div>
+    <!-- </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -161,34 +161,34 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+       <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
-      <div class="item">
+      <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
-     <div class="item">
+     <div class="item"> -->
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
       </h2>
@@ -196,10 +196,23 @@
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="column">
+      <div class="content">
+        <h2 class="title is-3">Overview</h2>
+      <p>
+        Demonstration of safety chip's functionality of translating NL to LTL formulas, monitoring the agent’s decision-making process, and reprompting
+        with reason of violation for re-planning.
+      </p>
+      <img src="static/images/demo.png" height="100%">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Youtube video -->
@@ -213,7 +226,12 @@
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+            <video poster="" id="tree" autoplay controls muted loop height="100%">
+              <!-- Your video here -->
+              <source src="static/videos/safety_chip_1080.mp4"
+              type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
